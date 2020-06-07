@@ -1,27 +1,31 @@
 package com.example.compliance_king;
 
 public class ItemUseProduct {
+    int img;
     String name;
     String date1;
     String date2;
 
-    public ItemUseProduct(String name, String date1, String date2) {
+    public ItemUseProduct(int img, String name, String date1, String date2) {
+        this.img = img;
         this.name = name;
         this.date1 = date1;
         this.date2 = date2;
     }
 
-    public String getName() {
-        return name;
-    }
+    public int getImg() { return this.img;  }
+
+    public String getName() { return this.name; }
 
     public String getDate1() {
-        return date1;
+        return this.date1;
     }
 
     public String getDate2() {
-        return date2;
+        return this.date2;
     }
+
+    public void setImg(int img) { this.img = img; }
 
     public void setName(String name) {
         this.name = name;

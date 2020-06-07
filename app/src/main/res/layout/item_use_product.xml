@@ -8,7 +8,8 @@
     <ImageView
         android:id="@+id/product_img"
         android:layout_width="100dp"
-        android:layout_height="100dp" />
+        android:layout_height="100dp"
+        android:layout_margin="5dp"/>
 
     <TableLayout
         android:layout_width="match_parent"
@@ -26,7 +27,8 @@
             <TextView
                 android:id="@+id/product_name"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"/>
         </TableRow>
 
         <TableRow>
@@ -39,7 +41,8 @@
             <TextView
                 android:id="@+id/product_date1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"/>
         </TableRow>
 
         <TableRow>
@@ -52,7 +55,8 @@
             <TextView
                 android:id="@+id/product_date2"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"/>
         </TableRow>
 
     </TableLayout>
