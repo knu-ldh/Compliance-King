@@ -181,21 +181,21 @@ public class AddProductActivity extends AppCompatActivity {
                         String date = (String) tv_date3.getText();
                         String newDate = "";
 
-                        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-                        try {
-                            Date to = format.parse(date);
-
-                            Calendar c = Calendar.getInstance();
-                            c.setTime(to);
-                            c.add(c.DATE, selectM2[0]);
-
-                            newDate = format.format(c.getTime());
-
-                        } catch (ParseException e) {
-                            e.printStackTrace();
-                        }
-
-                        et_date2.setText(newDate);
+//                        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+//                        try {
+//                            Date to = format.parse(date);
+//
+//                            Calendar c = Calendar.getInstance();
+//                            c.setTime(to);
+//                            c.add(c.DATE, selectM2[0]);
+//
+//                            newDate = format.format(c.getTime());
+//
+//                        } catch (ParseException e) {
+//                            e.printStackTrace();
+//                        }
+//
+//                        et_date2.setText(newDate);
                     }
                 });
 
