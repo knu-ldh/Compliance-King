@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_use_product"
+            android:title="사용 중" />
+        <item
+            android:id="@+id/nav_finish_product"
+            android:title="사용 완료" />
+
+        <item
+            android:id="@+id/nav_1"
+            android:title="식품" />
+        <item
+            android:id="@+id/nav_2"
+            android:title="의약품" />
+        <item
+            android:id="@+id/nav_3"
+            android:title="화장품" />
+        <item
+            android:id="@+id/nav_4"
+            android:title="그 외" />
+    </group>
+</menu>
