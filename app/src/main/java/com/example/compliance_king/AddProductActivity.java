@@ -60,7 +60,7 @@ public class AddProductActivity extends AppCompatActivity {
 
         img = (ImageView)findViewById(R.id.img_photo);
 
-        tv_name = (TextView)findViewById(R.id.product_name);
+        tv_name = (TextView)findViewById(R.id.tv_name);
         btn_category = (Button) findViewById(R.id.btn_category);
         btn_date1 = (ImageButton) findViewById(R.id.btn_date1);
         btn_date3 = (ImageButton) findViewById(R.id.btn_date3);
@@ -181,21 +181,21 @@ public class AddProductActivity extends AppCompatActivity {
                         String date = (String) tv_date3.getText();
                         String newDate = "";
 
-//                        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-//                        try {
-//                            Date to = format.parse(date);
-//
-//                            Calendar c = Calendar.getInstance();
-//                            c.setTime(to);
-//                            c.add(c.DATE, selectM2[0]);
-//
-//                            newDate = format.format(c.getTime());
-//
-//                        } catch (ParseException e) {
-//                            e.printStackTrace();
-//                        }
-//
-//                        et_date2.setText(newDate);
+                        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+                        try {
+                            Date to = format.parse(date);
+
+                            Calendar c = Calendar.getInstance();
+                            c.setTime(to);
+                            c.add(c.DATE, selectM2[0]);
+
+                            newDate = format.format(c.getTime());
+
+                        } catch (ParseException e) {
+                            e.printStackTrace();
+                        }
+
+                        et_date2.setText(newDate);
                     }
                 });
 
@@ -211,8 +211,7 @@ public class AddProductActivity extends AppCompatActivity {
         btn_cancle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Main2Activity.class);
-                startActivity(intent);
+                finish();
             }
         });
 
@@ -222,11 +221,10 @@ public class AddProductActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), Main2Activity.class);
 
-
                 // 상품 정보 입력 받아서 넘기고 리스트뷰에 추가하기
-                intent.putExtra("name", tv_name.getText());
-                intent.putExtra("date1", tv_date1.getText());
-                intent.putExtra("date2", et_date2.getText());
+                intent.putExtra("name", tv_name.getText().toString());
+                intent.putExtra("date1", tv_date1.getText().toString());
+                intent.putExtra("date2", et_date2.getText().toString());
 
                 setResult(RESULT_OK, intent);
                 finish();

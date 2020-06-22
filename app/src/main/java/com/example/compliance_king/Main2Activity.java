@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.widget.AdapterView;
@@ -82,15 +83,14 @@ public class Main2Activity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), AddProductActivity.class);
                 startActivityForResult(intent, 0);
-
             }
         });
 
         // 리스트뷰
         this.InitializeProductData();
 
-        ListView listView = (ListView) findViewById(R.id.listView1);
-        final AdapterListView myAdapter = new AdapterListView(this, productDataList);
+        listView = (ListView) findViewById(R.id.listView1);
+        myAdapter = new AdapterListView(this, productDataList);
 
         listView.setAdapter(myAdapter);
 
@@ -139,6 +139,7 @@ public class Main2Activity extends AppCompatActivity {
             String name = data.getStringExtra("name");
             String date1 = data.getStringExtra("date1");
             String date2 = data.getStringExtra("date2");
+            Log.d("***",name+date1+date2);
 
             productDataList.add(new ItemUseProduct(R.drawable.ex,
                     name, date1, date2));
